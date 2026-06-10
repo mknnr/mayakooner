@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>maya kooner</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream: #f7f5f0;
+      --white: #ffffff;
+      --ink: #1a1a18;
+      --mid: #6b6b65;
+      --orange: #d4621a;
+      --light-rule: #e2e0da;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--white);
+      color: var(--ink);
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    /* NAV */
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 28px 48px;
+      position: sticky;
+      top: 0;
+      background: var(--white);
+      z-index: 100;
+      border-bottom: 1px solid var(--light-rule);
+    }
+
+    .nav-name {
+      font-family: 'EB Garamond', serif;
+      font-size: 18px;
+      font-weight: 400;
+      letter-spacing: 0.01em;
+      text-decoration: none;
+      color: var(--ink);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--ink);
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: 0.04em;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--orange); }
+
+    .nav-links .contact-link {
+      font-weight: 500;
+      color: var(--orange);
+    }
+
+    /* HERO */
+    .hero {
+      padding: 100px 48px 80px;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .hero-bio {
+      font-family: 'EB Garamond', serif;
+      font-size: clamp(22px, 3vw, 30px);
+      font-style: italic;
+      color: var(--ink);
+      line-height: 1.5;
+      font-weight: 400;
+    }
+
+    /* GRID */
+    .work-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-top: 1px solid var(--light-rule);
+    }
+
+    .work-cell {
+      border-right: 1px solid var(--light-rule);
+      text-decoration: none;
+      color: var(--ink);
+      display: block;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .work-cell:last-child { border-right: none; }
+
+    .work-cell-img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      display: block;
+      filter: grayscale(10%);
+      transition: filter 0.4s, transform 0.4s;
+    }
+
+    .work-cell:hover .work-cell-img {
+      filter: grayscale(0%);
+      transform: scale(1.02);
+    }
+
+    .work-cell-label {
+      padding: 20px 24px;
+      border-top: 1px solid var(--light-rule);
+    }
+
+    .work-cell-title {
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--mid);
+      font-weight: 400;
+    }
+
+    .work-cell:hover .work-cell-title { color: var(--orange); }
+
+    /* BOTTOM ROWS — writing, sound */
+    .work-list {
+      border-top: 1px solid var(--light-rule);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .work-list-cell {
+      padding: 48px;
+      border-right: 1px solid var(--light-rule);
+      text-decoration: none;
+      color: var(--ink);
+      display: block;
+      transition: background 0.2s;
+    }
+
+    .work-list-cell:last-child { border-right: none; }
+    .work-list-cell:hover { background: var(--cream); }
+
+    .work-list-cell-tag {
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 10px;
+      font-weight: 500;
+    }
+
+    .work-list-cell-title {
+      font-family: 'EB Garamond', serif;
+      font-size: 22px;
+      font-weight: 400;
+      margin-bottom: 8px;
+    }
+
+    .work-list-cell-desc {
+      font-size: 13px;
+      color: var(--mid);
+      line-height: 1.6;
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--light-rule);
+      padding: 28px 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    footer span {
+      font-size: 12px;
+      color: var(--mid);
+      letter-spacing: 0.04em;
+    }
+
+    footer a {
+      font-size: 12px;
+      color: var(--orange);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+    }
+
+    @media (max-width: 768px) {
+      nav { padding: 20px 24px; }
+      .nav-links { gap: 16px; }
+      .hero { padding: 60px 24px 48px; }
+      .work-grid { grid-template-columns: 1fr; }
+      .work-cell { border-right: none; border-bottom: 1px solid var(--light-rule); }
+      .work-list { grid-template-columns: 1fr; }
+      .work-list-cell { border-right: none; border-bottom: 1px solid var(--light-rule); padding: 32px 24px; }
+      footer { padding: 20px 24px; flex-direction: column; gap: 8px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-name" href="index.html">maya kooner</a>
+    <ul class="nav-links">
+      <li><a href="design.html">design</a></li>
+      <li><a href="events.html">events</a></li>
+      <li><a href="video.html">video</a></li>
+      <li><a href="writing.html">writing</a></li>
+      <li><a href="sound.html">sound</a></li>
+      <li><a href="mailto:mayakooner1@gmail.com" class="contact-link">contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <p class="hero-bio">vancouver-based student working across film, sound, and live events.</p>
+  </section>
+
+  <div class="work-grid">
+    <a class="work-cell" href="design.html">
+      <div style="background: #d9d5cc; aspect-ratio: 4/3; display:flex; align-items:center; justify-content:center;">
+        <span style="font-size:13px; color:#888; letter-spacing:0.06em;">design work</span>
+      </div>
+      <div class="work-cell-label">
+        <div class="work-cell-title">design</div>
+      </div>
+    </a>
+    <a class="work-cell" href="events.html">
+      <div style="background: #cfd0cc; aspect-ratio: 4/3; display:flex; align-items:center; justify-content:center;">
+        <span style="font-size:13px; color:#888; letter-spacing:0.06em;">events work</span>
+      </div>
+      <div class="work-cell-label">
+        <div class="work-cell-title">events</div>
+      </div>
+    </a>
+    <a class="work-cell" href="video.html">
+      <div style="background: #c8c5bf; aspect-ratio: 4/3; display:flex; align-items:center; justify-content:center;">
+        <span style="font-size:13px; color:#888; letter-spacing:0.06em;">video work</span>
+      </div>
+      <div class="work-cell-label">
+        <div class="work-cell-title">video</div>
+      </div>
+    </a>
+  </div>
+
+  <div class="work-list">
+    <a class="work-list-cell" href="writing.html">
+      <div class="work-list-cell-tag">writing</div>
+      <div class="work-list-cell-title">Essays, screenplays & criticism</div>
+      <div class="work-list-cell-desc">Academic writing, film analysis, and original screenplays.</div>
+    </a>
+    <a class="work-list-cell" href="sound.html">
+      <div class="work-list-cell-tag">sound</div>
+      <div class="work-list-cell-title">Audio stories & original songs</div>
+      <div class="work-list-cell-desc">Spatial audio, mixed and produced original music.</div>
+    </a>
+  </div>
+
+  <footer>
+    <span>maya kooner</span>
+    <a href="mailto:mayakooner1@gmail.com">mayakooner1@gmail.com</a>
+  </footer>
+
+</body>
+</html>

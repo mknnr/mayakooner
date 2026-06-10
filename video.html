@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>video — maya kooner</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .projects {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 48px;
+    }
+
+    .project {
+      padding: 56px 0;
+      border-bottom: 1px solid var(--light-rule);
+    }
+
+    .project:last-child { border-bottom: none; }
+
+    .project-img-placeholder {
+      width: 100%;
+      aspect-ratio: 16/9;
+      background: var(--cream);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--mid);
+      font-size: 12px;
+      letter-spacing: 0.06em;
+      margin-bottom: 24px;
+    }
+
+    .project-footer {
+      display: flex;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .project-year {
+      font-size: 13px;
+      color: var(--mid);
+      min-width: 48px;
+    }
+
+    .project-roles {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      min-width: 160px;
+    }
+
+    .project-role {
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--orange);
+      font-weight: 500;
+    }
+
+    .project-info { }
+
+    .project-title {
+      font-family: 'EB Garamond', serif;
+      font-size: 22px;
+      font-weight: 400;
+      margin-bottom: 8px;
+    }
+
+    .project-desc {
+      font-size: 13px;
+      color: var(--mid);
+      line-height: 1.7;
+      max-width: 520px;
+    }
+
+    .project-link {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 12px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--ink);
+      text-decoration: none;
+      border-bottom: 1px solid var(--ink);
+      padding-bottom: 2px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .project-link:hover { color: var(--orange); border-color: var(--orange); }
+
+    @media (max-width: 768px) {
+      .projects { padding: 0 24px; }
+      .project { padding: 40px 0; }
+      .project-footer { flex-direction: column; gap: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-name" href="index.html">maya kooner</a>
+    <ul class="nav-links">
+      <li><a href="design.html">design</a></li>
+      <li><a href="events.html">events</a></li>
+      <li><a href="video.html" class="active">video</a></li>
+      <li><a href="writing.html">writing</a></li>
+      <li><a href="sound.html">sound</a></li>
+      <li><a href="mailto:mayakooner1@gmail.com" class="contact-link">contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-header">
+    <h1>video</h1>
+    <p>Short films, shot and edited.</p>
+  </div>
+
+  <div class="projects">
+
+    <div class="project">
+      <div class="project-img-placeholder">[ image ]</div>
+      <div class="project-footer">
+        <div class="project-year">2026</div>
+        <div class="project-roles">
+          <span class="project-role">Shot & Edited by</span>
+          <span class="project-role">Maya Kooner</span>
+        </div>
+        <div class="project-info">
+          <div class="project-title">CITYGAL</div>
+          <div class="project-desc">Made during an accelerated filmmaking program that takes place over a week. In 7 days, one must: form a team, write a film, shoot on a smartphone, edit, and then screen it. CITYGAL follows a fish-out-of-water cowgirl attempting to navigate urban life without losing her roots.</div>
+          <a href="#" class="project-link">watch film</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <span>maya kooner</span>
+    <a href="mailto:mayakooner1@gmail.com">mayakooner1@gmail.com</a>
+  </footer>
+
+</body>
+</html>

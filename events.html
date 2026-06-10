@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>events — maya kooner</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .intro-text {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 48px 48px 0;
+      font-size: 15px;
+      color: var(--mid);
+      line-height: 1.8;
+    }
+
+    .intro-links {
+      margin-top: 20px;
+      display: flex;
+      gap: 24px;
+    }
+
+    .intro-links a {
+      font-size: 13px;
+      color: var(--orange);
+      text-decoration: none;
+      border-bottom: 1px solid var(--orange);
+      padding-bottom: 1px;
+    }
+
+    .events-list {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 48px 48px 0;
+    }
+
+    .event-item {
+      display: grid;
+      grid-template-columns: 120px 1fr 200px;
+      gap: 32px;
+      padding: 36px 0;
+      border-bottom: 1px solid var(--light-rule);
+      align-items: start;
+    }
+
+    .event-item:last-child { border-bottom: none; }
+
+    .event-year {
+      font-size: 13px;
+      color: var(--mid);
+      padding-top: 2px;
+    }
+
+    .event-roles {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .event-role {
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--orange);
+      font-weight: 500;
+    }
+
+    .event-body { }
+
+    .event-title {
+      font-family: 'EB Garamond', serif;
+      font-size: 22px;
+      font-weight: 400;
+      margin-bottom: 8px;
+    }
+
+    .event-desc {
+      font-size: 13px;
+      color: var(--mid);
+      line-height: 1.7;
+    }
+
+    .event-img-placeholder {
+      width: 100%;
+      aspect-ratio: 1/1;
+      background: var(--cream);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--mid);
+      font-size: 11px;
+      letter-spacing: 0.06em;
+    }
+
+    @media (max-width: 768px) {
+      .intro-text, .events-list { padding: 32px 24px 0; }
+      .event-item { grid-template-columns: 1fr; gap: 16px; }
+      .event-img-placeholder { aspect-ratio: 16/9; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-name" href="index.html">maya kooner</a>
+    <ul class="nav-links">
+      <li><a href="design.html">design</a></li>
+      <li><a href="events.html" class="active">events</a></li>
+      <li><a href="video.html">video</a></li>
+      <li><a href="writing.html">writing</a></li>
+      <li><a href="sound.html">sound</a></li>
+      <li><a href="mailto:mayakooner1@gmail.com" class="contact-link">contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-header">
+    <h1>events</h1>
+  </div>
+
+  <div class="intro-text">
+    <p>As Events Executive at CiTR 101.9 FM, I've spent the past year producing live programming across Vancouver — booking artists, managing teams, running sound, and seeing every event through from first promo to final night.</p>
+    <div class="intro-links">
+      <a href="#">CiTR 101.9 FM & Discorder Magazine</a>
+      <a href="#">CiTR Executive Team</a>
+    </div>
+  </div>
+
+  <div class="events-list">
+
+    <div class="event-item">
+      <div>
+        <div class="event-year">2026</div>
+        <br>
+        <div class="event-roles">
+          <span class="event-role">Event Coordinator</span>
+          <span class="event-role">Sound Tech</span>
+        </div>
+      </div>
+      <div class="event-body">
+        <div class="event-title">Fundraiser Closing Party</div>
+        <div class="event-desc">The closing celebration of CiTR's annual fundraiser, held at The Painted Ship. Coordinated three DJs and a karaoke night for 100+ attendees.</div>
+      </div>
+      <div class="event-img-placeholder">[ image ]</div>
+    </div>
+
+    <div class="event-item">
+      <div>
+        <div class="event-year">2026</div>
+        <br>
+        <div class="event-roles">
+          <span class="event-role">Event Coordinator</span>
+          <span class="event-role">Sound Tech</span>
+        </div>
+      </div>
+      <div class="event-body">
+        <div class="event-title">Fundraiser Opening Party</div>
+        <div class="event-desc">The kickoff event for CiTR's annual week-long fundraiser, featuring three notable local acts. Coordinated artists, ran sound, and managed the event for 150+ attendees.</div>
+      </div>
+      <div class="event-img-placeholder">[ image ]</div>
+    </div>
+
+  </div>
+
+  <footer>
+    <span>maya kooner</span>
+    <a href="mailto:mayakooner1@gmail.com">mayakooner1@gmail.com</a>
+  </footer>
+
+</body>
+</html>

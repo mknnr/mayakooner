@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sound — maya kooner</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .sound-list {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 48px;
+    }
+
+    .sound-item {
+      padding: 40px 0;
+      border-bottom: 1px solid var(--light-rule);
+    }
+
+    .sound-item:last-child { border-bottom: none; }
+
+    .sound-tag {
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--orange);
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    .sound-title {
+      font-family: 'EB Garamond', serif;
+      font-size: 22px;
+      font-weight: 400;
+      margin-bottom: 10px;
+      color: var(--ink);
+    }
+
+    .sound-desc {
+      font-size: 13px;
+      color: var(--mid);
+      line-height: 1.7;
+    }
+
+    .sound-link {
+      display: inline-block;
+      margin-top: 14px;
+      font-size: 12px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--ink);
+      text-decoration: none;
+      border-bottom: 1px solid var(--ink);
+      padding-bottom: 2px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .sound-link:hover { color: var(--orange); border-color: var(--orange); }
+
+    @media (max-width: 768px) {
+      .sound-list { padding: 0 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-name" href="index.html">maya kooner</a>
+    <ul class="nav-links">
+      <li><a href="design.html">design</a></li>
+      <li><a href="events.html">events</a></li>
+      <li><a href="video.html">video</a></li>
+      <li><a href="writing.html">writing</a></li>
+      <li><a href="sound.html" class="active">sound</a></li>
+      <li><a href="mailto:mayakooner1@gmail.com" class="contact-link">contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-header">
+    <h1>sound</h1>
+  </div>
+
+  <div class="sound-list">
+
+    <div class="sound-item">
+      <div class="sound-tag">Audio Story</div>
+      <div class="sound-title">Rock Around You</div>
+      <div class="sound-desc">(2025) A spatial audio story of 90's Joan Jett on a show night.</div>
+      <a href="#" class="sound-link">listen</a>
+    </div>
+
+    <div class="sound-item">
+      <div class="sound-tag">Song</div>
+      <div class="sound-title">Don't Wanna Love You</div>
+      <div class="sound-desc">(2021) A pop-punk tune, mixed and played by me.</div>
+      <a href="#" class="sound-link">listen</a>
+    </div>
+
+    <div class="sound-item">
+      <div class="sound-tag">Song</div>
+      <div class="sound-title">Warm Air</div>
+      <div class="sound-desc">(2021) An airy groovy tune, mixed and played by me.</div>
+      <a href="#" class="sound-link">listen</a>
+    </div>
+
+  </div>
+
+  <footer>
+    <span>maya kooner</span>
+    <a href="mailto:mayakooner1@gmail.com">mayakooner1@gmail.com</a>
+  </footer>
+
+</body>
+</html>
