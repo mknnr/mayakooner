@@ -5,100 +5,109 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>events — maya kooner</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <style>
     .intro-text {
       max-width: 680px;
       margin: 0 auto;
       padding: 48px 48px 0;
-      font-size: 15px;
+      font-size: 17px;
       color: var(--mid);
       line-height: 1.8;
     }
 
     .intro-links {
-      margin-top: 20px;
+      margin-top: 16px;
       display: flex;
       gap: 24px;
     }
 
     .intro-links a {
-      font-size: 13px;
+      font-size: 16px;
       color: var(--orange);
       text-decoration: none;
       border-bottom: 1px solid var(--orange);
       padding-bottom: 1px;
+      transition: opacity 0.2s;
     }
 
+    .intro-links a:hover { opacity: 0.6; }
+
     .events-list {
-      max-width: 860px;
+      max-width: 900px;
       margin: 0 auto;
       padding: 48px 48px 0;
     }
 
     .event-item {
       display: grid;
-      grid-template-columns: 120px 1fr 200px;
+      grid-template-columns: 110px 1fr 180px;
       gap: 32px;
-      padding: 36px 0;
+      padding: 40px 0;
       border-bottom: 1px solid var(--light-rule);
       align-items: start;
     }
 
     .event-item:last-child { border-bottom: none; }
 
-    .event-year {
-      font-size: 13px;
-      color: var(--mid);
-      padding-top: 2px;
-    }
+    .event-left { }
 
-    .event-roles {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
+    .event-year {
+      font-size: 15px;
+      color: var(--mid);
+      margin-bottom: 10px;
     }
 
     .event-role {
-      font-size: 10px;
-      letter-spacing: 0.1em;
+      font-size: 13px;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
       color: var(--orange);
-      font-weight: 500;
+      line-height: 1.8;
     }
-
-    .event-body { }
 
     .event-title {
       font-family: 'EB Garamond', serif;
       font-size: 22px;
       font-weight: 400;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
     }
 
     .event-desc {
-      font-size: 13px;
+      font-size: 16px;
       color: var(--mid);
       line-height: 1.7;
     }
 
-    .event-img-placeholder {
-      width: 100%;
-      aspect-ratio: 1/1;
-      background: var(--cream);
+    .event-links {
+      margin-top: 14px;
       display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--mid);
-      font-size: 11px;
-      letter-spacing: 0.06em;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .event-links a {
+      font-size: 14px;
+      color: var(--orange);
+      text-decoration: none;
+      border-bottom: 1px solid var(--orange);
+      padding-bottom: 1px;
+      display: inline-block;
+      transition: opacity 0.2s;
+    }
+
+    .event-links a:hover { opacity: 0.6; }
+
+    .event-img {
+      width: 100%;
+      display: block;
     }
 
     @media (max-width: 768px) {
       .intro-text, .events-list { padding: 32px 24px 0; }
-      .event-item { grid-template-columns: 1fr; gap: 16px; }
-      .event-img-placeholder { aspect-ratio: 16/9; }
+      .event-item { grid-template-columns: 1fr; gap: 20px; }
+      .event-img { max-width: 240px; }
     }
   </style>
 </head>
@@ -118,48 +127,134 @@
 
   <div class="page-header">
     <h1>events</h1>
+    <p>As Events Executive at CiTR 101.9 FM, I've spent the past year producing live programming across Vancouver — booking artists, managing teams, running sound, and seeing every event through from first promo to final night.</p>
   </div>
 
   <div class="intro-text">
-    <p>As Events Executive at CiTR 101.9 FM, I've spent the past year producing live programming across Vancouver — booking artists, managing teams, running sound, and seeing every event through from first promo to final night.</p>
     <div class="intro-links">
-      <a href="#">CiTR 101.9 FM & Discorder Magazine</a>
-      <a href="#">CiTR Executive Team</a>
+      <a href="https://www.instagram.com/fantarecords?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">CiTR 101.9 FM & Discorder Magazine</a>
+      <a href="https://www.instagram.com/citr.exec?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">CiTR Executive Team</a>
     </div>
   </div>
 
   <div class="events-list">
 
+    <!-- 2026 -->
     <div class="event-item">
-      <div>
+      <div class="event-left">
         <div class="event-year">2026</div>
-        <br>
-        <div class="event-roles">
-          <span class="event-role">Event Coordinator</span>
-          <span class="event-role">Sound Tech</span>
-        </div>
+        <div class="event-role">Event Coordinator<br>Sound Tech</div>
       </div>
-      <div class="event-body">
+      <div>
         <div class="event-title">Fundraiser Closing Party</div>
         <div class="event-desc">The closing celebration of CiTR's annual fundraiser, held at The Painted Ship. Coordinated three DJs and a karaoke night for 100+ attendees.</div>
       </div>
-      <div class="event-img-placeholder">[ image ]</div>
+      <img class="event-img" src="FD2026_Finale_insta.png" alt="Fundraiser Closing Party">
     </div>
 
     <div class="event-item">
-      <div>
+      <div class="event-left">
         <div class="event-year">2026</div>
-        <br>
-        <div class="event-roles">
-          <span class="event-role">Event Coordinator</span>
-          <span class="event-role">Sound Tech</span>
-        </div>
+        <div class="event-role">Event Coordinator<br>Sound Tech</div>
       </div>
-      <div class="event-body">
+      <div>
         <div class="event-title">Fundraiser Opening Party</div>
         <div class="event-desc">The kickoff event for CiTR's annual week-long fundraiser, featuring three notable local acts. Coordinated artists, ran sound, and managed the event for 150+ attendees.</div>
       </div>
-      <div class="event-img-placeholder">[ image ]</div>
+      <img class="event-img" src="oc.png" alt="Fundraiser Opening Party">
+    </div>
+
+    <!-- 2025 -->
+    <div class="event-item">
+      <div class="event-left">
+        <div class="event-year">2025</div>
+        <div class="event-role">Event Coordinator<br>Sound Tech</div>
+      </div>
+      <div>
+        <div class="event-title">Halloween Live Music Event</div>
+        <div class="event-desc">A live Halloween music event featuring three curated rock bands. Booked the artists, ran sound, and managed venue, promo, and run-of-show for 150+ attendees.</div>
+      </div>
+      <img class="event-img" src="I_Hate_Gay_Halloween_.png" alt="Halloween Live Music Event">
+    </div>
+
+    <div class="event-item">
+      <div class="event-left">
+        <div class="event-year">2025</div>
+        <div class="event-role">Event Coordinator<br>Sound Tech</div>
+      </div>
+      <div>
+        <div class="event-title">Jazz Speakeasy</div>
+        <div class="event-desc">An intimate live jazz experience organized through CiTR, complete with a secret venue reveal. Coordinated performers, logistics, and the full event experience end-to-end.</div>
+      </div>
+      <img class="event-img" src="speakeasy.png" alt="Jazz Speakeasy">
+    </div>
+
+    <div class="event-item">
+      <div class="event-left">
+        <div class="event-year">2025</div>
+        <div class="event-role">Event Coordinator<br>Sound Tech</div>
+      </div>
+      <div>
+        <div class="event-title">Darkroom Rave</div>
+        <div class="event-desc">A ticketed fundraiser and DJ night produced in collaboration with UBC PhotoSoc. Booked three DJs, ran sound, and coordinated a darkroom-themed event that turned a profit.</div>
+      </div>
+      <img class="event-img" src="darkroom_in_use.png" alt="Darkroom Rave">
+    </div>
+
+    <div class="event-item">
+      <div class="event-left">
+        <div class="event-year">2025</div>
+        <div class="event-role">Event Coordinator</div>
+      </div>
+      <div>
+        <div class="event-title">Discorder Magazine Launch Party</div>
+        <div class="event-desc">A release event for Discorder Magazine, produced in collaboration with Blank Vinyl Project. Worked with a team to book artists, coordinate logistics, and execute a full promotional campaign. Hosted the night live for 200+ attendees at Koerner's Pub.</div>
+      </div>
+      <img class="event-img" src="extra__extra_.jpeg" alt="Discorder Magazine Launch Party">
+    </div>
+
+    <div class="event-item">
+      <div class="event-left">
+        <div class="event-year">2025</div>
+        <div class="event-role">Producer<br>Sound Engineer</div>
+      </div>
+      <div>
+        <div class="event-title">breakFEST Podcast</div>
+        <div class="event-desc">Producer and sound engineer for a podcast magazine created at FEST Film Festival in Portugal. Managed a 30-person international team across branding, social media, website design, correspondence, and interpersonal coordination, delivering a cohesive publication from concept to release.</div>
+        <div class="event-links">
+          <a href="https://breakfest.my.canva.site/?fbclid=PAQ0xDSwLdl0BleHRuA2FlbQIxMQABp0m0ibSSbXEzw2MCO1dtBzU0_3XY_ca2mzqzyDD-Govqv5hFFFhA0y-azr-S_aem_Aon274hoC2eyKI1TqCn-RA">Website</a>
+          <a href="https://www.instagram.com/breakfest.ubc/?hl=en">Instagram</a>
+        </div>
+      </div>
+      <img class="event-img" src="break-FEST-dragged_page-0001.jpg" alt="breakFEST Podcast">
+    </div>
+
+    <div class="event-item">
+      <div class="event-left">
+        <div class="event-year">2025</div>
+        <div class="event-role">Event Coordinator</div>
+      </div>
+      <div>
+        <div class="event-title">Everything But The Panel</div>
+        <div class="event-desc">A panel discussion organized by The Artbeat, bringing together artists, academics, and organizers for an in-depth conversation about the realities of art-making under institution.</div>
+        <div class="event-links">
+          <a href="https://www.instagram.com/artbeatcitr?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">Instagram</a>
+        </div>
+      </div>
+      <img class="event-img" src="imgg.png" alt="Everything But The Panel">
+    </div>
+
+    <!-- 2024 -->
+    <div class="event-item">
+      <div class="event-left">
+        <div class="event-year">2024</div>
+        <div class="event-role">Event Coordinator<br>Speaker</div>
+      </div>
+      <div>
+        <div class="event-title">Rooting Resistance in Action</div>
+        <div class="event-desc">A 3-day film screening and workshop series on land resistance, produced across multiple Vancouver venues in collaboration with the Anartchists collective. Educational programming connecting film, community dialogue, and organizing.</div>
+      </div>
+      <img class="event-img" src="rooting-1.png" alt="Rooting Resistance in Action">
     </div>
 
   </div>
