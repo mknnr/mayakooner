@@ -21,47 +21,31 @@
 
     .project:last-child { border-bottom: none; }
 
-    .project-img-placeholder {
+    .project-img {
       width: 100%;
-      aspect-ratio: 16/9;
-      background: var(--cream);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--mid);
-      font-size: 14px;
-      letter-spacing: 0.06em;
+      display: block;
       margin-bottom: 24px;
     }
 
     .project-footer {
-      display: flex;
-      gap: 48px;
+      display: grid;
+      grid-template-columns: 110px 160px 1fr;
+      gap: 24px;
       align-items: start;
     }
 
     .project-year {
       font-size: 15px;
       color: var(--mid);
-      min-width: 48px;
-    }
-
-    .project-roles {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-      min-width: 160px;
     }
 
     .project-role {
-      font-size: 10px;
-      letter-spacing: 0.1em;
+      font-size: 13px;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
       color: var(--orange);
-      font-weight: 500;
+      line-height: 1.8;
     }
-
-    .project-info { }
 
     .project-title {
       font-family: 'EB Garamond', serif;
@@ -71,31 +55,27 @@
     }
 
     .project-desc {
-      font-size: 15px;
+      font-size: 16px;
       color: var(--mid);
       line-height: 1.7;
-      max-width: 520px;
     }
 
     .project-link {
-      display: inline-block;
-      margin-top: 16px;
-      font-size: 14px;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--ink);
-      text-decoration: none;
-      border-bottom: 1px solid var(--ink);
-      padding-bottom: 2px;
-      transition: color 0.2s, border-color 0.2s;
+      display: inline;
+      margin-top: 10px;
+      font-size: 15px;
+      color: var(--orange);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: opacity 0.2s;
     }
 
-    .project-link:hover { color: var(--orange); border-color: var(--orange); }
+    .project-link:hover { opacity: 0.6; }
 
     @media (max-width: 768px) {
       .projects { padding: 0 24px; }
       .project { padding: 40px 0; }
-      .project-footer { flex-direction: column; gap: 16px; }
+      .project-footer { grid-template-columns: 1fr; gap: 12px; }
     }
   </style>
 </head>
@@ -115,23 +95,71 @@
 
   <div class="page-header">
     <h1>video</h1>
-    <p>Short films, shot and edited.</p>
   </div>
 
   <div class="projects">
 
     <div class="project">
-      <div class="project-img-placeholder">[ image ]</div>
+      <img class="project-img" src="h.png" alt="Student Executive Video">
       <div class="project-footer">
         <div class="project-year">2026</div>
-        <div class="project-roles">
-          <span class="project-role">Shot & Edited by</span>
-          <span class="project-role">Maya Kooner</span>
+        <div class="project-role">Shot & Edited by<br>Maya Kooner</div>
+        <div>
+          <div class="project-title">Student Executive Video</div>
+          <div class="project-desc">Made to present CiTR 101.9 FM and Discorder Magazine's 2025/2026 student executive team. Reached over 4000 Instagram users.</div>
+          <br><a href="#" class="project-link">watch</a>
         </div>
-        <div class="project-info">
+      </div>
+    </div>
+
+    <div class="project">
+      <img class="project-img" src="citygal_poster.png" alt="CITYGAL">
+      <div class="project-footer">
+        <div class="project-year">2026</div>
+        <div class="project-role">Shot & Edited by<br>Maya Kooner</div>
+        <div>
           <div class="project-title">CITYGAL</div>
           <div class="project-desc">Made during an accelerated filmmaking program that takes place over a week. In 7 days, one must: form a team, write a film, shoot on a smartphone, edit, and then screen it. CITYGAL follows a fish-out-of-water cowgirl attempting to navigate urban life without losing her roots.</div>
-          <a href="#" class="project-link">watch film</a>
+          <br><a href="#" class="project-link">watch</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project">
+      <img class="project-img" src="sfsfs.png" alt="Mother Nature">
+      <div class="project-footer">
+        <div class="project-year">2023</div>
+        <div class="project-role">Shot & Edited by<br>Maya Kooner</div>
+        <div>
+          <div class="project-title">Mother Nature</div>
+          <div class="project-desc">A narrative dance film following a young woman's journey to reconnect with the natural world.</div>
+          <br><a href="#" class="project-link">watch</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project">
+      <img class="project-img" src="hkhj.png" alt="2001: A Practical FX Odyssey">
+      <div class="project-footer">
+        <div class="project-year">2023</div>
+        <div class="project-role">Edited & Voiced by<br>Maya Kooner</div>
+        <div>
+          <div class="project-title">2001: A Practical FX Odyssey</div>
+          <div class="project-desc">A video essay exploring the groundbreaking practical effects behind Kubrick's 2001: A Space Odyssey.</div>
+          <br><a href="#" class="project-link">watch</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project">
+      <img class="project-img" src="b.png" alt="Woo Wee Doo Wee">
+      <div class="project-footer">
+        <div class="project-year">2022</div>
+        <div class="project-role">Shot by<br>Maya Kooner</div>
+        <div>
+          <div class="project-title">Woo Wee Doo Wee</div>
+          <div class="project-desc">Made during a 3-day filmmaking workshop with a 3-hour shoot window.</div>
+          <br><a href="#" class="project-link">watch</a>
         </div>
       </div>
     </div>
