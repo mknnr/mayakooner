@@ -23,16 +23,22 @@
       gap: 24px;
     }
 
-    .intro-links a {
-      font-size: 16px;
-      color: var(--orange);
-      text-decoration: none;
-      border-bottom: 1px solid var(--orange);
-      padding-bottom: 1px;
-      transition: opacity 0.2s;
+    .header-links {
+      margin-top: 20px;
+      display: flex;
+      gap: 24px;
     }
 
-    .intro-links a:hover { opacity: 0.6; }
+    .header-links a {
+      font-size: 16px;
+      color: var(--orange);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: opacity 0.2s;
+      display: inline;
+    }
+
+    .header-links a:hover { opacity: 0.6; }
 
     .events-list {
       max-width: 900px;
@@ -90,10 +96,9 @@
     .event-links a {
       font-size: 14px;
       color: var(--orange);
-      text-decoration: none;
-      border-bottom: 1px solid var(--orange);
-      padding-bottom: 1px;
-      display: inline-block;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      display: inline;
       transition: opacity 0.2s;
     }
 
@@ -128,14 +133,13 @@
   <div class="page-header">
     <h1>events</h1>
     <p>As Events Executive at CiTR 101.9 FM, I've spent the past year producing live programming across Vancouver — booking artists, managing teams, running sound, and seeing every event through from first promo to final night.</p>
-  </div>
-
-  <div class="intro-text">
-    <div class="intro-links">
+    <div class="header-links">
       <a href="https://www.instagram.com/fantarecords?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">CiTR 101.9 FM & Discorder Magazine</a>
       <a href="https://www.instagram.com/citr.exec?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">CiTR Executive Team</a>
     </div>
   </div>
+
+
 
   <div class="events-list">
 

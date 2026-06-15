@@ -47,7 +47,7 @@ nav {
 
 .nav-links a {
   text-decoration: none;
-  color: var(--orange);
+  color: var(--ink);
   font-family: 'EB Garamond', serif;
   font-size: 17px;
   font-weight: 400;
@@ -60,7 +60,7 @@ nav {
 
 .nav-links .contact-link {
   font-weight: 500;
-  color: var(--orange) !important;
+  color: var(--ink) !important;
 }
 
 .nav-links .contact-link:hover {
