@@ -5,72 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>maya kooner</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --cream: #f7f5f0;
-      --white: #ffffff;
-      --ink: #1a1a18;
-      --mid: #6b6b65;
-      --orange: #d4621a;
-      --light-rule: #e2e0da;
-    }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--white);
-      color: var(--ink);
-      font-size: 15px;
-      line-height: 1.6;
-    }
-
-    /* NAV */
-    nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 28px 48px;
-      position: sticky;
-      top: 0;
-      background: var(--white);
-      z-index: 100;
-      border-bottom: 1px solid var(--light-rule);
-    }
-
-    .nav-name {
-      font-family: 'EB Garamond', serif;
-      font-size: 18px;
-      font-weight: 400;
-      letter-spacing: 0.01em;
-      text-decoration: none;
-      color: var(--ink);
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 32px;
-      list-style: none;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      color: var(--ink);
-      font-size: 13px;
-      font-weight: 400;
-      letter-spacing: 0.04em;
-      transition: color 0.2s;
-    }
-
-    .nav-links a:hover { color: var(--orange); }
-
-    .nav-links .contact-link {
-      font-weight: 500;
-      color: var(--orange);
-    }
-
     /* HERO */
     .hero {
       padding: 100px 48px 80px;
@@ -106,18 +43,22 @@
 
     .work-cell:last-child { border-right: none; }
 
-    .work-cell-img {
+    .work-cell-img-wrap {
       width: 100%;
       aspect-ratio: 4/3;
+      overflow: hidden;
+    }
+
+    .work-cell-img {
+      width: 100%;
+      height: 100%;
       object-fit: cover;
       display: block;
-      filter: grayscale(10%);
-      transition: filter 0.4s, transform 0.4s;
+      transition: transform 0.5s ease;
     }
 
     .work-cell:hover .work-cell-img {
-      filter: grayscale(0%);
-      transform: scale(1.02);
+      transform: scale(1.04);
     }
 
     .work-cell-label {
@@ -126,14 +67,15 @@
     }
 
     .work-cell-title {
-      font-size: 12px;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--mid);
+      font-family: 'EB Garamond', serif;
+      font-size: 17px;
+      letter-spacing: 0.04em;
+      color: var(--orange);
       font-weight: 400;
+      transition: color 0.2s;
     }
 
-    .work-cell:hover .work-cell-title { color: var(--orange); }
+    .work-cell:hover .work-cell-title { color: var(--mid); }
 
     /* BOTTOM ROWS — writing, sound */
     .work-list {
@@ -155,58 +97,34 @@
     .work-list-cell:hover { background: var(--cream); }
 
     .work-list-cell-tag {
-      font-size: 11px;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
+      font-family: 'EB Garamond', serif;
+      font-size: 17px;
       color: var(--orange);
       margin-bottom: 10px;
-      font-weight: 500;
+      transition: color 0.2s;
     }
+
+    .work-list-cell:hover .work-list-cell-tag { color: var(--mid); }
 
     .work-list-cell-title {
       font-family: 'EB Garamond', serif;
-      font-size: 22px;
+      font-size: 24px;
       font-weight: 400;
       margin-bottom: 8px;
     }
 
     .work-list-cell-desc {
-      font-size: 13px;
+      font-size: 17px;
       color: var(--mid);
       line-height: 1.6;
     }
 
-    /* FOOTER */
-    footer {
-      border-top: 1px solid var(--light-rule);
-      padding: 28px 48px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    footer span {
-      font-size: 12px;
-      color: var(--mid);
-      letter-spacing: 0.04em;
-    }
-
-    footer a {
-      font-size: 12px;
-      color: var(--orange);
-      text-decoration: none;
-      letter-spacing: 0.04em;
-    }
-
     @media (max-width: 768px) {
-      nav { padding: 20px 24px; }
-      .nav-links { gap: 16px; }
       .hero { padding: 60px 24px 48px; }
       .work-grid { grid-template-columns: 1fr; }
       .work-cell { border-right: none; border-bottom: 1px solid var(--light-rule); }
       .work-list { grid-template-columns: 1fr; }
       .work-list-cell { border-right: none; border-bottom: 1px solid var(--light-rule); padding: 32px 24px; }
-      footer { padding: 20px 24px; flex-direction: column; gap: 8px; text-align: center; }
     }
   </style>
 </head>
@@ -230,24 +148,24 @@
 
   <div class="work-grid">
     <a class="work-cell" href="design.html">
-      <div style="background: #d9d5cc; aspect-ratio: 4/3; display:flex; align-items:center; justify-content:center;">
-        <span style="font-size:13px; color:#888; letter-spacing:0.06em;">design work</span>
+      <div class="work-cell-img-wrap">
+        <img class="work-cell-img" src="4_copy.png" alt="Design work">
       </div>
       <div class="work-cell-label">
         <div class="work-cell-title">design</div>
       </div>
     </a>
     <a class="work-cell" href="events.html">
-      <div style="background: #cfd0cc; aspect-ratio: 4/3; display:flex; align-items:center; justify-content:center;">
-        <span style="font-size:13px; color:#888; letter-spacing:0.06em;">events work</span>
+      <div class="work-cell-img-wrap">
+        <img class="work-cell-img" src="FD2026_Finale_insta.png" alt="Events work">
       </div>
       <div class="work-cell-label">
         <div class="work-cell-title">events</div>
       </div>
     </a>
     <a class="work-cell" href="video.html">
-      <div style="background: #c8c5bf; aspect-ratio: 4/3; display:flex; align-items:center; justify-content:center;">
-        <span style="font-size:13px; color:#888; letter-spacing:0.06em;">video work</span>
+      <div class="work-cell-img-wrap">
+        <img class="work-cell-img" src="citygal_poster.png" alt="Video work">
       </div>
       <div class="work-cell-label">
         <div class="work-cell-title">video</div>
