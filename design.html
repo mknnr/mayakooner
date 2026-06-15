@@ -5,91 +5,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>design — maya kooner</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <style>
     .projects {
-      max-width: 860px;
+      max-width: 800px;
       margin: 0 auto;
       padding: 0 48px;
     }
 
     .project {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 48px;
       padding: 56px 0;
       border-bottom: 1px solid var(--light-rule);
-      align-items: start;
     }
 
     .project:last-child { border-bottom: none; }
 
     .project-img {
       width: 100%;
-      aspect-ratio: 4/3;
-      object-fit: cover;
-      background: var(--cream);
       display: block;
-    }
-
-    .project-img-placeholder {
-      width: 100%;
-      aspect-ratio: 4/3;
-      background: var(--cream);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--mid);
-      font-size: 12px;
-      letter-spacing: 0.06em;
-    }
-
-    .project-meta {
-      padding-top: 4px;
+      margin-bottom: 20px;
     }
 
     .project-tag {
-      font-size: 11px;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
+      font-size: 14px;
+      letter-spacing: 0.06em;
       color: var(--orange);
-      font-weight: 500;
-      margin-bottom: 12px;
+      margin-bottom: 6px;
     }
 
     .project-title {
       font-family: 'EB Garamond', serif;
-      font-size: 26px;
+      font-size: 24px;
       font-weight: 400;
-      margin-bottom: 12px;
-      line-height: 1.3;
+      margin-bottom: 8px;
     }
 
     .project-desc {
-      font-size: 13px;
+      font-size: 16px;
       color: var(--mid);
       line-height: 1.7;
     }
 
-    .project-link {
-      display: inline-block;
-      margin-top: 20px;
-      font-size: 12px;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--ink);
-      text-decoration: none;
-      border-bottom: 1px solid var(--ink);
-      padding-bottom: 2px;
-      transition: color 0.2s, border-color 0.2s;
-    }
-
-    .project-link:hover { color: var(--orange); border-color: var(--orange); }
-
     @media (max-width: 768px) {
       .projects { padding: 0 24px; }
-      .project { grid-template-columns: 1fr; gap: 24px; padding: 40px 0; }
+      .project { padding: 40px 0; }
     }
   </style>
 </head>
@@ -109,29 +69,51 @@
 
   <div class="page-header">
     <h1>design</h1>
-    <p>Graphic design, promotional materials, and visual identity work.</p>
+    <p>Graphic design, print, branding, and visual identity work.</p>
   </div>
 
   <div class="projects">
 
     <div class="project">
-      <div class="project-img-placeholder">[ image ]</div>
-      <div class="project-meta">
-        <div class="project-tag">Event Poster</div>
-        <div class="project-title">Crash Test Cinema</div>
-        <div class="project-desc">CiTR 101.9 FM × Disorder Magazine. Designed promotional materials for a low-barrier filmmaking program.</div>
-        <a href="#" class="project-link">view project</a>
-      </div>
+      <img class="project-img" src="crash_test_cinema__copy.png" alt="Crash Test Cinema poster">
+      <div class="project-tag">Event Poster</div>
+      <div class="project-title">Crash Test Cinema</div>
+      <div class="project-desc">CiTR 101.9 FM × Disorder Magazine. Designed promotional materials for a low-barrier filmmaking program.</div>
     </div>
 
     <div class="project">
-      <div class="project-img-placeholder">[ image ]</div>
-      <div class="project-meta">
-        <div class="project-tag">Branding</div>
-        <div class="project-title">Old Hat Homeworks</div>
-        <div class="project-desc">Visual identity and print materials.</div>
-        <a href="#" class="project-link">view project</a>
-      </div>
+      <img class="project-img" src="CITYGAL-Web_Version.jpg" alt="CITYGAL film poster">
+      <div class="project-tag">Film Poster</div>
+      <div class="project-title">CITYGAL</div>
+      <div class="project-desc">Crash Test Cinema, CiTR 101.9 FM. Designed for digital and physical advertisement.</div>
+    </div>
+
+    <div class="project">
+      <img class="project-img" src="4_copy.png" alt="Women Removed — digital art series">
+      <div class="project-tag">Digital Art Series</div>
+      <div class="project-title">Women Removed</div>
+      <div class="project-desc">Three-part Photoshop series exploring the historical erasure of women in the film industry.</div>
+    </div>
+
+    <div class="project">
+      <img class="project-img" src="Untitled_design_copy.png" alt="Old Hat Homeworks logo design">
+      <div class="project-tag">Logo & Branding</div>
+      <div class="project-title">Old Hat Homeworks</div>
+      <div class="project-desc">Logo and visual identity design for a residential construction company.</div>
+    </div>
+
+    <div class="project">
+      <img class="project-img" src="oldhat_flyer-1.png" alt="Old Hat Homeworks flyer">
+      <div class="project-tag">Flyer Design</div>
+      <div class="project-title">Old Hat Homeworks — Flyer</div>
+      <div class="project-desc">Print and digital advertisement for a local construction company.</div>
+    </div>
+
+    <div class="project">
+      <img class="project-img" src="6_copy.png" alt="Fire — relief print">
+      <div class="project-tag">Relief Print</div>
+      <div class="project-title">Fire</div>
+      <div class="project-desc">Hand-carved woodblock print exploring mechanical reproduction.</div>
     </div>
 
   </div>
