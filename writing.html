@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="style.css">
   <style>
     .writing-list {
-      max-width: 720px;
+      max-width: 860px;
       margin: 0 auto;
       padding: 0 48px;
     }
@@ -21,13 +21,24 @@
 
     .writing-item:last-child { border-bottom: none; }
 
+    .writing-footer {
+      display: grid;
+      grid-template-columns: 110px 160px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .writing-year {
+      font-size: 15px;
+      color: var(--mid);
+    }
+
     .writing-tag {
-      font-size: 11px;
-      letter-spacing: 0.1em;
+      font-size: 13px;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
       color: var(--orange);
-      font-weight: 500;
-      margin-bottom: 10px;
+      line-height: 1.8;
     }
 
     .writing-title {
@@ -36,17 +47,7 @@
       font-weight: 400;
       margin-bottom: 10px;
       line-height: 1.3;
-      text-decoration: none;
-      color: var(--ink);
-      display: block;
-      transition: color 0.2s;
     }
-
-    .writing-title:hover { color: var(--orange); }
-
-    a .writing-title,
-    .writing-item a .writing-title { text-decoration: underline; text-decoration-color: transparent; }
-    .writing-item a:hover .writing-title { text-decoration-color: var(--orange); }
 
     .writing-desc {
       font-size: 15px;
@@ -71,6 +72,7 @@
 
     @media (max-width: 768px) {
       .writing-list { padding: 0 24px; }
+      .writing-footer { grid-template-columns: 1fr; gap: 12px; }
     }
   </style>
 </head>
@@ -95,31 +97,51 @@
   <div class="writing-list">
 
     <div class="writing-item">
-      <div class="writing-tag">Screenplay</div>
-      <div class="writing-title">Be With the Flowers</div>
-      <div class="writing-desc">A short film script. In the lush hills of rural Northern India, a wetland ecologist loses her way and finds something she never would've looked for.</div>
-      <a href="BE_WITH_THE_FLOWERS.pdf" class="writing-link">read</a>
+      <div class="writing-footer">
+        <div class="writing-year">2026</div>
+        <div class="writing-tag">Screenplay</div>
+        <div>
+          <div class="writing-title">Be With the Flowers</div>
+          <div class="writing-desc">A short film script. In the lush hills of rural Northern India, a wetland ecologist loses her way and finds something she never would've looked for.</div>
+          <a href="BE_WITH_THE_FLOWERS.pdf" class="writing-link">read</a>
+        </div>
+      </div>
     </div>
 
     <div class="writing-item">
-      <div class="writing-tag">Essay</div>
-      <div class="writing-title">From Fanfiction to Fancasting: Produser Evolution in the Harry Potter Fandom</div>
-      <div class="writing-desc">An academic study exploring fancasting as an emerging form of fan participation. Uses interviews, Google Trends, and AO3 data to argue that fancasting is a necessary evolution of produser culture.</div>
-      <a href="From_Fanfiction_to_Fancasting.pdf" class="writing-link">read</a>
+      <div class="writing-footer">
+        <div class="writing-year">2025</div>
+        <div class="writing-tag">Essay</div>
+        <div>
+          <div class="writing-title">From Fanfiction to Fancasting: Produser Evolution in the Harry Potter Fandom</div>
+          <div class="writing-desc">An academic study exploring fancasting as an emerging form of fan participation. Uses interviews, Google Trends, and AO3 data to argue that fancasting is a necessary evolution of produser culture.</div>
+          <a href="From_Fanfiction_to_Fancasting.pdf" class="writing-link">read</a>
+        </div>
+      </div>
     </div>
 
     <div class="writing-item">
-      <div class="writing-tag">Essay</div>
-      <div class="writing-title">Prime Video: The Chameleon of the SVOD Market</div>
-      <div class="writing-desc">An analysis of how Amazon Prime Video overtook Netflix to claim 22% of the streaming market, and what its pivot toward sports, ads, and franchise IP signals for the future of independent storytelling.</div>
-      <a href="Prime_Video_-_The_Chameleon_of_the_SVOD_Market.pdf" class="writing-link">read</a>
+      <div class="writing-footer">
+        <div class="writing-year">2025</div>
+        <div class="writing-tag">Essay</div>
+        <div>
+          <div class="writing-title">Prime Video: The Chameleon of the SVOD Market</div>
+          <div class="writing-desc">An analysis of how Amazon Prime Video overtook Netflix to claim 22% of the streaming market, and what its pivot toward sports, ads, and franchise IP signals for the future of independent storytelling.</div>
+          <a href="Prime_Video_-_The_Chameleon_of_the_SVOD_Market.pdf" class="writing-link">read</a>
+        </div>
+      </div>
     </div>
 
     <div class="writing-item">
-      <div class="writing-tag">Essay</div>
-      <div class="writing-title">The Woman in Trousers: Marlene Dietrich and the Fabric of Her Studio System Stardom</div>
-      <div class="writing-desc">A close reading of Dietrich's star persona through fan magazines and film, tracing how she navigated and subverted Hollywood's attempts to contain her.</div>
-      <a href="The_Woman_in_Trousers_-_Marlene_Dietrich.pdf" class="writing-link">read</a>
+      <div class="writing-footer">
+        <div class="writing-year">2025</div>
+        <div class="writing-tag">Essay</div>
+        <div>
+          <div class="writing-title">The Woman in Trousers: Marlene Dietrich and the Fabric of Her Studio System Stardom</div>
+          <div class="writing-desc">A close reading of Dietrich's star persona through fan magazines and film, tracing how she navigated and subverted Hollywood's attempts to contain her.</div>
+          <a href="The_Woman_in_Trousers_-_Marlene_Dietrich.pdf" class="writing-link">read</a>
+        </div>
+      </div>
     </div>
 
   </div>

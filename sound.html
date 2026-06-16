@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="style.css">
   <style>
     .sound-list {
-      max-width: 720px;
+      max-width: 860px;
       margin: 0 auto;
       padding: 0 48px;
     }
@@ -21,13 +21,24 @@
 
     .sound-item:last-child { border-bottom: none; }
 
+    .sound-footer {
+      display: grid;
+      grid-template-columns: 110px 160px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .sound-year {
+      font-size: 15px;
+      color: var(--mid);
+    }
+
     .sound-tag {
-      font-size: 11px;
-      letter-spacing: 0.1em;
+      font-size: 13px;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
       color: var(--orange);
-      font-weight: 500;
-      margin-bottom: 10px;
+      line-height: 1.8;
     }
 
     .sound-title {
@@ -44,21 +55,6 @@
       line-height: 1.7;
     }
 
-    .sound-link {
-      display: inline-block;
-      margin-top: 14px;
-      font-size: 14px;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--ink);
-      text-decoration: none;
-      border-bottom: 1px solid var(--ink);
-      padding-bottom: 2px;
-      transition: color 0.2s, border-color 0.2s;
-    }
-
-    .sound-link:hover { color: var(--orange); border-color: var(--orange); }
-
     .sound-audio {
       margin-top: 16px;
       width: 100%;
@@ -72,6 +68,7 @@
 
     @media (max-width: 768px) {
       .sound-list { padding: 0 24px; }
+      .sound-footer { grid-template-columns: 1fr; gap: 12px; }
     }
   </style>
 </head>
@@ -96,24 +93,39 @@
   <div class="sound-list">
 
     <div class="sound-item">
-      <div class="sound-tag">Audio Story</div>
-      <div class="sound-title">Rock Around You</div>
-      <div class="sound-desc">(2025) A spatial audio story of 90's Joan Jett on a show night.</div>
-      <audio class="sound-audio" controls src="Rock_Around_You.mp3"></audio>
+      <div class="sound-footer">
+        <div class="sound-year">2025</div>
+        <div class="sound-tag">Audio Story</div>
+        <div>
+          <div class="sound-title">Rock Around You</div>
+          <div class="sound-desc">A spatial audio story of 90's Joan Jett on a show night.</div>
+          <audio class="sound-audio" controls src="Rock_Around_You.mp3"></audio>
+        </div>
+      </div>
     </div>
 
     <div class="sound-item">
-      <div class="sound-tag">Song</div>
-      <div class="sound-title">Don't Wanna Love You</div>
-      <div class="sound-desc">(2021) A pop-punk tune, mixed and played by me.</div>
-      <audio class="sound-audio" controls src="dont_wanna_love_you.mp3"></audio>
+      <div class="sound-footer">
+        <div class="sound-year">2021</div>
+        <div class="sound-tag">Song</div>
+        <div>
+          <div class="sound-title">Don't Wanna Love You</div>
+          <div class="sound-desc">A pop-punk tune, mixed and played by me.</div>
+          <audio class="sound-audio" controls src="dont_wanna_love_you.mp3"></audio>
+        </div>
+      </div>
     </div>
 
     <div class="sound-item">
-      <div class="sound-tag">Song</div>
-      <div class="sound-title">Warm Air</div>
-      <div class="sound-desc">(2021) An airy groovy tune, mixed and played by me.</div>
-      <audio class="sound-audio" controls src="warm_air.mp3"></audio>
+      <div class="sound-footer">
+        <div class="sound-year">2021</div>
+        <div class="sound-tag">Song</div>
+        <div>
+          <div class="sound-title">Warm Air</div>
+          <div class="sound-desc">An airy groovy tune, mixed and played by me.</div>
+          <audio class="sound-audio" controls src="warm_air.mp3"></audio>
+        </div>
+      </div>
     </div>
 
   </div>
