@@ -23,15 +23,9 @@
 
     .writing-footer {
       display: grid;
-      grid-template-columns: 160px 1fr;
+      grid-template-columns: 110px 160px 1fr;
       gap: 24px;
       align-items: start;
-    }
-
-    .writing-meta {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
     }
 
     .writing-year {
@@ -65,16 +59,16 @@
       display: inline-block;
       margin-top: 14px;
       font-size: 14px;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.18em;
       text-transform: uppercase;
-      color: var(--ink);
+      color: var(--mid);
       text-decoration: none;
-      border-bottom: 1px solid var(--ink);
+      border-bottom: 1px solid currentColor;
       padding-bottom: 2px;
       transition: color 0.2s, border-color 0.2s;
     }
 
-    .writing-link:hover { color: var(--orange); border-color: var(--orange); }
+    .writing-link:hover { color: var(--orange); border-color: currentColor; }
 
     @media (max-width: 768px) {
       .writing-list { padding: 0 24px; }
@@ -98,17 +92,14 @@
 
   <div class="page-header">
     <h1>writing</h1>
-    <p class="page-subheading">A collection of original screenplays, creative criticism, and academic media studies.</p>
   </div>
 
   <div class="writing-list">
 
     <div class="writing-item">
       <div class="writing-footer">
-        <div class="writing-meta">
-          <div class="writing-year">2026</div>
-          <div class="writing-tag">Screenplay</div>
-        </div>
+        <div class="writing-year">2026</div>
+        <div class="writing-tag">Screenplay</div>
         <div>
           <div class="writing-title">Be With the Flowers</div>
           <div class="writing-desc">A short film script. In the lush hills of rural Northern India, a wetland ecologist loses her way and finds something she never would've looked for.</div>
@@ -119,10 +110,8 @@
 
     <div class="writing-item">
       <div class="writing-footer">
-        <div class="writing-meta">
-          <div class="writing-year">2025</div>
-          <div class="writing-tag">Essay</div>
-        </div>
+        <div class="writing-year">2025</div>
+        <div class="writing-tag">Essay</div>
         <div>
           <div class="writing-title">From Fanfiction to Fancasting: Produser Evolution in the Harry Potter Fandom</div>
           <div class="writing-desc">An academic study exploring fancasting as an emerging form of fan participation. Uses interviews, Google Trends, and AO3 data to argue that fancasting is a necessary evolution of produser culture.</div>
@@ -133,10 +122,8 @@
 
     <div class="writing-item">
       <div class="writing-footer">
-        <div class="writing-meta">
-          <div class="writing-year">2025</div>
-          <div class="writing-tag">Essay</div>
-        </div>
+        <div class="writing-year">2025</div>
+        <div class="writing-tag">Essay</div>
         <div>
           <div class="writing-title">Prime Video: The Chameleon of the SVOD Market</div>
           <div class="writing-desc">An analysis of how Amazon Prime Video overtook Netflix to claim 22% of the streaming market, and what its pivot toward sports, ads, and franchise IP signals for the future of independent storytelling.</div>
@@ -147,10 +134,8 @@
 
     <div class="writing-item">
       <div class="writing-footer">
-        <div class="writing-meta">
-          <div class="writing-year">2025</div>
-          <div class="writing-tag">Essay</div>
-        </div>
+        <div class="writing-year">2025</div>
+        <div class="writing-tag">Essay</div>
         <div>
           <div class="writing-title">The Woman in Trousers: Marlene Dietrich and the Fabric of Her Studio System Stardom</div>
           <div class="writing-desc">A close reading of Dietrich's star persona through fan magazines and film, tracing how she navigated and subverted Hollywood's attempts to contain her.</div>

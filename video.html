@@ -60,30 +60,20 @@
       line-height: 1.7;
     }
 
-    .page-subheading {
-      font-family: 'EB Garamond', serif;
-      font-size: clamp(16px, 1.8vw, 20px);
-      font-style: normal;
-      color: var(--mid);
-      margin-top: 16px;
-      line-height: 1.7;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      display: inline-block;
-    }
-
     .project-link {
-      display: inline;
-      margin-top: 10px;
-      font-size: 15px;
-      color: var(--orange);
-      text-decoration: underline;
-      text-underline-offset: 3px;
-      transition: opacity 0.2s;
+      display: inline-block;
+      margin-top: 14px;
+      font-size: 14px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--mid);
+      text-decoration: none;
+      border-bottom: 1px solid currentColor;
+      padding-bottom: 2px;
+      transition: color 0.2s, border-color 0.2s;
     }
 
-    .project-link:hover { opacity: 0.6; }
+    .project-link:hover { color: var(--orange); border-color: currentColor; }
 
     @media (max-width: 768px) {
       .projects { padding: 0 24px; }
@@ -108,7 +98,6 @@
 
   <div class="page-header">
     <h1>video</h1>
-    <p class="page-subheading">I write, shoot, and edit short films, creative video essays, and promotional media.</p>
   </div>
 
   <div class="projects">

@@ -25,18 +25,19 @@
 
     /* Adjusted padding and added width constraint to prevent premature line breaking */
     .page-header {
-      padding: 64px 72px 40px 96px;
-      text-align: left;
+      padding: 100px 16px 40px; 
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
     }
 
     /* Scaled down the description slightly on desktop to ensure it sits cleanly in one line */
     .page-header p {
-      font-size: 17px;
-      color: var(--mid);
-      margin-top: 16px;
-      max-width: 560px;
-      line-height: 1.7;
-      white-space: nowrap;
+      font-size: clamp(16px, 1.8vw, 20px);
+      max-width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      white-space: normal;
     }
 
     .header-links {
@@ -47,15 +48,19 @@
     }
 
     .header-links a {
-      font-size: 16px;
-      color: var(--orange);
-      text-decoration: underline;
-      text-underline-offset: 3px;
-      transition: opacity 0.2s;
-      display: inline;
+      display: inline-block;
+      margin-top: 14px;
+      font-size: 14px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--mid);
+      text-decoration: none;
+      border-bottom: 1px solid currentColor;
+      padding-bottom: 2px;
+      transition: color 0.2s, border-color 0.2s;
     }
 
-    .header-links a:hover { opacity: 0.6; }
+    .header-links a:hover { color: var(--orange); border-color: currentColor; }
 
     .events-list {
       max-width: 900px;
@@ -111,15 +116,19 @@
     }
 
     .event-links a {
+      display: inline-block;
+      margin-top: 14px;
       font-size: 14px;
-      color: var(--orange);
-      text-decoration: underline;
-      text-underline-offset: 3px;
-      display: inline;
-      transition: opacity 0.2s;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--mid);
+      text-decoration: none;
+      border-bottom: 1px solid currentColor;
+      padding-bottom: 2px;
+      transition: color 0.2s, border-color 0.2s;
     }
 
-    .event-links a:hover { opacity: 0.6; }
+    .event-links a:hover { color: var(--orange); border-color: currentColor; }
 
     .event-img {
       width: 100%;
