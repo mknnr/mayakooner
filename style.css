@@ -89,12 +89,14 @@ nav {
 }
 
 .page-subheading {
-  font-size: 13px;
-  font-style: italic;
+  font-size: 15px;
   color: var(--mid);
-  margin-top: 8px;
-  line-height: 1.5;
+  margin-top: 16px;
   max-width: 100%;
+  line-height: 1.7;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* FOOTER */
