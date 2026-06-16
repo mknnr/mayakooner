@@ -11,7 +11,7 @@
     .sound-list {
       max-width: 720px;
       margin: 0 auto;
-      padding: 0 48px;
+      padding: 0 72px;
     }
 
     .sound-item {
@@ -59,6 +59,17 @@
 
     .sound-link:hover { color: var(--orange); border-color: var(--orange); }
 
+    .sound-audio {
+      margin-top: 16px;
+      width: 100%;
+      max-width: 480px;
+      height: 40px;
+    }
+
+    .sound-audio::-webkit-media-controls-panel {
+      background-color: var(--cream);
+    }
+
     @media (max-width: 768px) {
       .sound-list { padding: 0 24px; }
     }
@@ -88,21 +99,21 @@
       <div class="sound-tag">Audio Story</div>
       <div class="sound-title">Rock Around You</div>
       <div class="sound-desc">(2025) A spatial audio story of 90's Joan Jett on a show night.</div>
-      <a href="#" class="sound-link">listen</a>
+      <audio class="sound-audio" controls src="Rock_Around_You.mp3"></audio>
     </div>
 
     <div class="sound-item">
       <div class="sound-tag">Song</div>
       <div class="sound-title">Don't Wanna Love You</div>
       <div class="sound-desc">(2021) A pop-punk tune, mixed and played by me.</div>
-      <a href="#" class="sound-link">listen</a>
+      <audio class="sound-audio" controls src="dont_wanna_love_you.mp3"></audio>
     </div>
 
     <div class="sound-item">
       <div class="sound-tag">Song</div>
       <div class="sound-title">Warm Air</div>
       <div class="sound-desc">(2021) An airy groovy tune, mixed and played by me.</div>
-      <a href="#" class="sound-link">listen</a>
+      <audio class="sound-audio" controls src="warm_air.mp3"></audio>
     </div>
 
   </div>
