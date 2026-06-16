@@ -25,19 +25,18 @@
 
     /* Adjusted padding and added width constraint to prevent premature line breaking */
     .page-header {
-      padding: 100px 16px 40px; 
-      max-width: 900px;
-      margin: 0 auto;
-      text-align: center;
+      padding: 64px 72px 40px 96px;
+      text-align: left;
     }
 
     /* Scaled down the description slightly on desktop to ensure it sits cleanly in one line */
     .page-header p {
-      font-size: clamp(16px, 1.8vw, 20px);
+      font-size: 13px;
+      font-style: italic;
+      color: var(--mid);
+      margin-top: 8px;
       max-width: 100%;
-      margin-left: auto;
-      margin-right: auto;
-      white-space: normal;
+      white-space: nowrap;
     }
 
     .header-links {
