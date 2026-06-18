@@ -117,19 +117,21 @@ footer a {
 
 @media (max-width: 768px) {
   nav {
-    padding: 14px 16px;
-    gap: 8px;
+    padding: 12px 14px;
+    gap: 14px;
   }
   .nav-name {
-    font-size: 14px;
+    font-size: 13px;
+    line-height: 1.25;
+    max-width: 70px;
     flex-shrink: 0;
   }
   .nav-links {
-    gap: 9px;
+    gap: 7px;
     flex-wrap: nowrap;
   }
   .nav-links a {
-    font-size: 11px;
+    font-size: 10px;
     white-space: nowrap;
   }
   .page-header {
