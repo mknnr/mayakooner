@@ -58,44 +58,28 @@ nav {
 .nav-links a:hover { color: var(--mid); }
 .nav-links a.active { color: var(--orange); }
 
-.button-link,
-.writing-link,
-.project-link,
-.project-btn,
-.header-links a,
-.event-links a {
-  display: inline-block;
-  margin-top: 14px;
-  font-size: 14px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--mid);
-  text-decoration: none;
-  border-bottom: 1px solid currentColor;
-  padding-bottom: 2px;
-  transition: color 0.2s, border-color 0.2s;
+.nav-links .contact-link {
+  font-weight: 500;
+  color: var(--ink) !important;
 }
 
-.button-link:hover,
-.writing-link:hover,
-.project-link:hover,
-.project-btn:hover,
-.header-links a:hover,
-.event-links a:hover {
-  color: var(--orange);
-  border-color: currentColor;
+.nav-links .contact-link:hover {
+  color: var(--mid) !important;
 }
 
+/* PAGE HEADER */
 .page-header {
-  padding: 64px 72px 40px 96px;
+  padding: 64px 72px 40px 128px;
   border-bottom: 1px solid var(--light-rule);
+  text-align: left;
 }
 
 .page-header h1 {
   font-family: 'EB Garamond', serif;
-  font-size: clamp(32px, 5vw, 52px);
+  font-size: clamp(28px, 4vw, 48px);
   font-weight: 400;
   letter-spacing: -0.01em;
+  white-space: nowrap;
 }
 
 .page-header p {
@@ -104,6 +88,7 @@ nav {
   color: var(--mid);
   max-width: 560px;
   line-height: 1.7;
+  text-align: left;
 }
 
 /* FOOTER */

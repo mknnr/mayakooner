@@ -8,63 +8,26 @@
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <style>
-    .intro-text {
-      max-width: 680px;
-      margin: 0 auto;
-      padding: 48px 48px 0;
-      font-size: 17px;
-      color: var(--mid);
-      line-height: 1.8;
-    }
-
-    .intro-links {
-      margin-top: 16px;
-      display: flex;
-      gap: 24px;
-    }
-
-    /* Adjusted padding and added width constraint to prevent premature line breaking */
-    .page-header {
-      padding: 100px 16px 40px; 
-      max-width: 900px;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    /* Scaled down the description slightly on desktop to ensure it sits cleanly in one line */
-    .page-header p {
-      font-size: clamp(16px, 1.8vw, 20px);
-      max-width: 100%;
-      margin-left: auto;
-      margin-right: auto;
-      white-space: normal;
-    }
-
     .header-links {
       margin-top: 20px;
       display: flex;
       gap: 24px;
-      justify-content: center;
     }
 
     .header-links a {
-      display: inline-block;
-      margin-top: 14px;
-      font-size: 14px;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--mid);
-      text-decoration: none;
-      border-bottom: 1px solid currentColor;
-      padding-bottom: 2px;
-      transition: color 0.2s, border-color 0.2s;
+      font-size: 16px;
+      color: var(--orange);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: opacity 0.2s;
+      display: inline;
     }
 
-    .header-links a:hover { color: var(--orange); border-color: currentColor; }
+    .header-links a:hover { opacity: 0.6; }
 
     .events-list {
       max-width: 900px;
-      margin: 0 auto;
+      margin: 0;
       padding: 48px 48px 0;
     }
 
@@ -116,19 +79,15 @@
     }
 
     .event-links a {
-      display: inline-block;
-      margin-top: 14px;
       font-size: 14px;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--mid);
-      text-decoration: none;
-      border-bottom: 1px solid currentColor;
-      padding-bottom: 2px;
-      transition: color 0.2s, border-color 0.2s;
+      color: var(--orange);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      display: inline;
+      transition: opacity 0.2s;
     }
 
-    .event-links a:hover { color: var(--orange); border-color: currentColor; }
+    .event-links a:hover { opacity: 0.6; }
 
     .event-img {
       width: 100%;
@@ -136,7 +95,6 @@
     }
 
     @media (max-width: 768px) {
-      .page-header { padding: 60px 16px 24px; }
       .intro-text, .events-list { padding: 32px 24px 0; }
       .event-item { grid-template-columns: 1fr; gap: 20px; }
       .event-img { max-width: 240px; }
@@ -165,6 +123,8 @@
       <a href="https://www.instagram.com/citr.exec?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">CiTR Executive Team</a>
     </div>
   </div>
+
+
 
   <div class="events-list">
 
@@ -211,7 +171,7 @@
         <div class="event-year">2025</div>
         <div class="event-role">Event Coordinator<br>Sound Tech</div>
       </div>
-      <div>      
+      <div>
         <div class="event-title">Jazz Speakeasy</div>
         <div class="event-desc">An intimate live jazz experience organized through CiTR, complete with a secret venue reveal. Coordinated performers, logistics, and the full event experience end-to-end.</div>
       </div>
