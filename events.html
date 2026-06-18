@@ -13,6 +13,13 @@
       white-space: nowrap;
     }
 
+    @media (max-width: 768px) {
+      .page-header p {
+        white-space: normal;
+        max-width: 100%;
+      }
+    }
+
     .header-links {
       margin-top: 20px;
       display: flex;
@@ -100,9 +107,11 @@
     }
 
     @media (max-width: 768px) {
-      .intro-text, .events-list { padding: 32px 24px 0; }
-      .event-item { grid-template-columns: 1fr; gap: 20px; }
-      .event-img { max-width: 240px; }
+      .intro-text, .events-list { padding: 24px 20px 0; }
+      .event-item { grid-template-columns: 1fr; gap: 16px; padding: 28px 0; }
+      .event-img { max-width: 200px; }
+      .header-links { flex-direction: column; gap: 8px; }
+      .header-links a { font-size: 13px; }
     }
   </style>
 </head>
