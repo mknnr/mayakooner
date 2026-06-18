@@ -21,10 +21,50 @@
 
     .project:last-child { border-bottom: none; }
 
+    .project-img-link {
+      display: block;
+      position: relative;
+      margin-bottom: 24px;
+      overflow: hidden;
+      text-decoration: none;
+    }
+
     .project-img {
       width: 100%;
       display: block;
-      margin-bottom: 24px;
+      transition: transform 0.5s ease, filter 0.4s ease;
+    }
+
+    .project-img-link:hover .project-img {
+      transform: scale(1.03);
+      filter: brightness(0.6);
+    }
+
+    .play-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0.85);
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.92);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .project-img-link:hover .play-button {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+
+    .play-button svg {
+      width: 22px;
+      height: 22px;
+      margin-left: 3px;
     }
 
     .project-footer {
@@ -60,18 +100,6 @@
       line-height: 1.7;
     }
 
-    .project-link {
-      display: inline;
-      margin-top: 10px;
-      font-size: 15px;
-      color: var(--orange);
-      text-decoration: underline;
-      text-underline-offset: 3px;
-      transition: opacity 0.2s;
-    }
-
-    .project-link:hover { opacity: 0.6; }
-
     @media (max-width: 768px) {
       .projects { padding: 0 24px; }
       .project { padding: 40px 0; }
@@ -95,84 +123,109 @@
 
   <div class="page-header">
     <h1>video</h1>
+    <p>Short films, promotional content, and video essays.</p>
   </div>
 
   <div class="projects">
 
     <div class="project">
-      <img class="project-img" src="swiz_beach.png" alt="swiz on the beach">
+      <a class="project-img-link" href="https://drive.google.com/file/d/12jxma0YC_E2WKbSuLzYNrQWD5NATP6d0/view?usp=sharing">
+        <img class="project-img" src="swiz_beach.png" alt="swiz on the beach">
+        <div class="play-button">
+          <svg viewBox="0 0 24 24" fill="#1a1a18"><path d="M8 5v14l11-7z"/></svg>
+        </div>
+      </a>
       <div class="project-footer">
         <div class="project-year">2026</div>
-        <div class="project-role">Shot by<br>Maya Kooner</div>
+        <div class="project-role">Shot & Edited by<br>Maya Kooner</div>
         <div>
           <div class="project-title">swiz on the beach</div>
           <div class="project-desc">Gear test shot on a Panasonic GH5 with a DJI Ronin-SC gimbal. Swiz goes to the beach.</div>
-          <br><a href="https://drive.google.com/file/d/12jxma0YC_E2WKbSuLzYNrQWD5NATP6d0/view?usp=sharing" class="project-link">watch</a>
         </div>
       </div>
     </div>
 
     <div class="project">
-      <img class="project-img" src="h.png" alt="Student Executive Video">
+      <a class="project-img-link" href="https://drive.google.com/file/d/1EtZVzIioi8df0uhmY6WR23I30GV72IAx/view?usp=sharing">
+        <img class="project-img" src="h.png" alt="Student Executive Video">
+        <div class="play-button">
+          <svg viewBox="0 0 24 24" fill="#1a1a18"><path d="M8 5v14l11-7z"/></svg>
+        </div>
+      </a>
       <div class="project-footer">
         <div class="project-year">2026</div>
         <div class="project-role">Shot & Edited by<br>Maya Kooner</div>
         <div>
           <div class="project-title">Student Executive Video</div>
           <div class="project-desc">Made to present CiTR 101.9 FM and Discorder Magazine's 2025/2026 student executive team. Reached over 4000 Instagram users.</div>
-          <br><a href="https://drive.google.com/file/d/1EtZVzIioi8df0uhmY6WR23I30GV72IAx/view?usp=sharing" class="project-link">watch</a>
         </div>
       </div>
     </div>
 
     <div class="project">
-      <img class="project-img" src="citygal_poster.png" alt="CITYGAL">
+      <a class="project-img-link" href="https://drive.google.com/file/d/1B9L8KY4jWv0VIoRre3GT9hpvzG_VmEAB/view?usp=sharing">
+        <img class="project-img" src="citygal_poster.png" alt="CITYGAL">
+        <div class="play-button">
+          <svg viewBox="0 0 24 24" fill="#1a1a18"><path d="M8 5v14l11-7z"/></svg>
+        </div>
+      </a>
       <div class="project-footer">
         <div class="project-year">2026</div>
         <div class="project-role">Shot & Edited by<br>Maya Kooner</div>
         <div>
           <div class="project-title">CITYGAL</div>
           <div class="project-desc">Made during an accelerated, week-long filmmaking program. In 7 days, one must: form a team, write a film, shoot on a smartphone, edit, and then screen it. Shot on iPhone 16. CITYGAL follows a fish-out-of-water cowgirl attempting to navigate urban life without losing her roots.</div>
-          <br><a href="https://drive.google.com/file/d/1B9L8KY4jWv0VIoRre3GT9hpvzG_VmEAB/view?usp=sharing" class="project-link">watch</a>
         </div>
       </div>
     </div>
 
     <div class="project">
-      <img class="project-img" src="sfsfs.png" alt="Mother Nature">
+      <a class="project-img-link" href="https://drive.google.com/file/d/18u5OErkAPOIFR5fON08p_7rzGtBA0WYD/view?usp=sharing">
+        <img class="project-img" src="sfsfs.png" alt="Mother Nature">
+        <div class="play-button">
+          <svg viewBox="0 0 24 24" fill="#1a1a18"><path d="M8 5v14l11-7z"/></svg>
+        </div>
+      </a>
       <div class="project-footer">
         <div class="project-year">2023</div>
         <div class="project-role">Shot & Edited by<br>Maya Kooner</div>
         <div>
           <div class="project-title">Mother Nature</div>
           <div class="project-desc">A narrative dance film following a young woman's journey to reconnect with the natural world.</div>
-          <br><a href="https://drive.google.com/file/d/18u5OErkAPOIFR5fON08p_7rzGtBA0WYD/view?usp=sharing" class="project-link">watch</a>
         </div>
       </div>
     </div>
 
     <div class="project">
-      <img class="project-img" src="hkhj.png" alt="2001: A Practical FX Odyssey">
+      <a class="project-img-link" href="https://drive.google.com/file/d/1tc2o1FNURPf19SJLckkL9X1TaoO8Wmud/view?usp=sharing">
+        <img class="project-img" src="hkhj.png" alt="2001: A Practical FX Odyssey">
+        <div class="play-button">
+          <svg viewBox="0 0 24 24" fill="#1a1a18"><path d="M8 5v14l11-7z"/></svg>
+        </div>
+      </a>
       <div class="project-footer">
         <div class="project-year">2023</div>
         <div class="project-role">Edited & Voiced by<br>Maya Kooner</div>
         <div>
           <div class="project-title">2001: A Practical FX Odyssey</div>
           <div class="project-desc">A video essay exploring the groundbreaking practical effects behind Kubrick's 2001: A Space Odyssey.</div>
-          <br><a href="https://drive.google.com/file/d/1tc2o1FNURPf19SJLckkL9X1TaoO8Wmud/view?usp=sharing" class="project-link">watch</a>
         </div>
       </div>
     </div>
 
     <div class="project">
-      <img class="project-img" src="b.png" alt="Woo Wee Doo Wee">
+      <a class="project-img-link" href="https://drive.google.com/file/d/1U-lDsPQj5JxacLHsM33InD6JHX3xDsxy/view?usp=sharing">
+        <img class="project-img" src="b.png" alt="Woo Wee Doo Wee">
+        <div class="play-button">
+          <svg viewBox="0 0 24 24" fill="#1a1a18"><path d="M8 5v14l11-7z"/></svg>
+        </div>
+      </a>
       <div class="project-footer">
         <div class="project-year">2022</div>
         <div class="project-role">Shot by<br>Maya Kooner</div>
         <div>
           <div class="project-title">Woo Wee Doo Wee</div>
           <div class="project-desc">Made during a 3-day filmmaking workshop with a 3-hour shoot window.</div>
-          <br><a href="https://drive.google.com/file/d/1U-lDsPQj5JxacLHsM33InD6JHX3xDsxy/view?usp=sharing" class="project-link">watch</a>
         </div>
       </div>
     </div>

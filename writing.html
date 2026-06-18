@@ -59,16 +59,16 @@
       display: inline-block;
       margin-top: 14px;
       font-size: 14px;
-      letter-spacing: 0.18em;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
-      color: var(--mid);
+      color: var(--ink);
       text-decoration: none;
-      border-bottom: 1px solid currentColor;
+      border-bottom: 1px solid var(--ink);
       padding-bottom: 2px;
       transition: color 0.2s, border-color 0.2s;
     }
 
-    .writing-link:hover { color: var(--orange); border-color: currentColor; }
+    .writing-link:hover { color: var(--orange); border-color: var(--orange); }
 
     @media (max-width: 768px) {
       .writing-list { padding: 0 24px; }
@@ -92,6 +92,7 @@
 
   <div class="page-header">
     <h1>writing</h1>
+    <p>Essays, screenplays, and media analysis.</p>
   </div>
 
   <div class="writing-list">
