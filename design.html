@@ -60,6 +60,24 @@
       line-height: 1.7;
     }
 
+    .event-links {
+      margin-top: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .event-links a {
+      font-size: 14px;
+      color: var(--orange);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      display: inline;
+      transition: opacity 0.2s;
+    }
+
+    .event-links a:hover { opacity: 0.6; }
+
     @media (max-width: 768px) {
       .projects { padding: 0 20px; }
       .project { padding: 32px 0; }
@@ -113,15 +131,16 @@
     </div>
 
     <div class="project">
-      <a href="https://oldhathomeworks.com" target="_blank" rel="noopener noreferrer">
-        <img class="project-img" src="Screenshot 2026-07-22 at 5.58.27 PM.jpg" alt="Old Hat Homeworks website and logo design">
-      </a>
+      <img class="project-img" src="Screenshot 2026-07-22 at 5.58.27 PM.jpg" alt="Old Hat Homeworks website and logo design">
       <div class="project-footer">
         <div class="project-year">2026</div>
         <div class="project-tag">Website & Logo</div>
         <div>
           <div class="project-title">Old Hat Homeworks</div>
-          <div class="project-desc">Designed the official website and complete visual logo identity for Old Hat Homeworks, a residential construction company.</div>
+          <div class="project-desc">Designed the official website and visual identity for Old Hat Homeworks, a residential construction company.</div>
+          <div class="event-links">
+            <a href="https://oldhathomeworks.com" target="_blank" rel="noopener noreferrer">website</a>
+          </div>
         </div>
       </div>
     </div>
